@@ -1,0 +1,186 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name -- Portfolio</title>
+  <meta name="description" content="Personal portfolio of Your Name -- developer, designer, creator." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724; /* dark navy */
+      --card:#0b1220;
+      --muted:#94a3b8;
+      --accent:#7c3aed; /* violet */
+      --glass: rgba(255,255,255,0.04);
+      --radius:12px;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;color:#e6eef8;background:linear-gradient(180deg,var(--bg),#071122);}
+    a{color:inherit}
+    .container{max-width:1100px;margin:32px auto;padding:24px}/* Header */
+header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:28px}
+.brand{display:flex;align-items:center;gap:14px}
+.logo{height:56px;width:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#3b82f6);display:flex;align-items:center;justify-content:center;font-weight:700;color:white}
+nav{display:flex;gap:12px;align-items:center}
+.navlink{padding:8px 12px;border-radius:10px;color:var(--muted);text-decoration:none;font-weight:600}
+.navlink:hover{background:var(--glass);color:#fff}
+.cta{background:var(--accent);padding:9px 14px;border-radius:10px;color:white;text-decoration:none;font-weight:700}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin-bottom:32px}
+.intro h1{font-size: clamp(28px,4vw,44px);margin:0 0 8px 0}
+.intro p{margin:0 0 18px 0;color:var(--muted);line-height:1.5}
+.skills{display:flex;gap:10px;flex-wrap:wrap}
+.chip{background:rgba(255,255,255,0.03);padding:8px 10px;border-radius:999px;font-weight:600;color:var(--muted);}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:20px;border-radius:var(--radius);backdrop-filter: blur(6px);box-shadow: 0 6px 18px rgba(2,6,23,0.6)}
+
+/* projects grid */
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:20px}
+.project{padding:16px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.02)}
+.project h3{margin:0 0 8px 0}
+.project p{margin:0;color:var(--muted);font-size:14px}
+
+/* about/contact */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px}
+footer{margin-top:28px;color:var(--muted);text-align:center}
+
+/* responsive */
+@media (max-width:880px){
+  .hero{grid-template-columns:1fr;}
+  .intro{order:2}
+}
+
+/* simple form */
+form label{display:block;font-weight:600;margin-bottom:6px}
+form input, form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:#071026;color:#e6eef8}
+form button{margin-top:10px;padding:10px 14px;border-radius:8px;border:0;background:var(--accent);color:white;font-weight:700}
+
+/* small utility */
+.muted{color:var(--muted);font-size:14px}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">S</div>
+        <div>
+          <div style="font-weight:800">Sunil prathikshan</div>
+          <div class="muted" style="font-size:13px">Developer • Designer • Creator</div>
+        </div>
+      </div>
+      <nav>
+        <a class="navlink" href="#about">About</a>
+        <a class="navlink" href="#projects">Projects</a>
+        <a class="navlink" href="#contact">Contact</a>
+        <a class="cta" href="#contact">Hire me</a>
+      </nav>
+    </header><section class="hero">
+  <div>
+    <div class="intro card">
+      <h1>Hi -- I'm <span style="color:var(--accent)">Sunil prathikshan</span></h1>
+      <p>I build clean, modern web apps and delightful UI experiences. I focus on fast load times, accessibility, and clear product thinking. Based in City, Country.</p>
+      <div class="skills">
+        <div class="chip">HTML</div>
+        <div class="chip">CSS</div>
+        <div class="chip">JavaScript</div>
+        <div class="chip">React</div>
+        <div class="chip">UX</div>
+        <div class="chip">Figma</div>
+      </div>
+      <div style="margin-top:18px;display:flex;gap:10px">
+        <a class="cta" href="#projects">See projects</a>
+        <a class="navlink" href="mailto:your.email@example.com">Email me</a>
+      </div>
+    </div>
+
+    <section id="projects" style="margin-top:16px">
+      <h2 style="margin:10px 0">Selected projects</h2>
+      <div class="projects">
+        <article class="project card">
+          <h3>Project One</h3>
+          <p class="muted">A short description -- what it does and tech used. <strong>Live</strong> • <a href="#">code</a></p>
+        </article>
+        <article class="project card">
+          <h3>Project Two</h3>
+          <p class="muted">A short description -- problem solved and outcome. <strong>Award</strong> • <a href="#">case study</a></p>
+        </article>
+        <article class="project card">
+          <h3>Project Three</h3>
+          <p class="muted">Brief -- APIs, performance, scaling notes. <a href="#">demo</a></p>
+        </article>
+      </div>
+    </section>
+  </div>
+
+  <aside class="card">
+    <h3>Quick info</h3>
+    <p class="muted">Full-stack developer available for freelance and full-time roles. Comfortable working in distributed teams.</p>
+    <hr style="border:none;height:1px;background:rgba(255,255,255,0.03);margin:12px 0">
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <div class="muted"><strong>Location:</strong> City, Country</div>
+      <div class="muted"><strong>Email:</strong> your.email@example.com</div>
+      <div class="muted"><strong>Resume:</strong> <a href="#">Download</a></div>
+    </div>
+  </aside>
+</section>
+
+<section id="about" class="card" style="margin-top:18px">
+  <h2>About me</h2>
+  <p class="muted">Short bio -- what you do, how you approach product problems, and what you're excited to build next. Keep it to 2–4 lines so visitors can scan quickly.</p>
+  <div class="two-col" style="margin-top:12px">
+    <div>
+      <h3>Experience</h3>
+      <ul class="muted">
+        <li>Role at Company -- 2023–Present</li>
+        <li>Role at Company -- 2021–2023</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Tools</h3>
+      <div class="skills" style="margin-top:6px">
+        <div class="chip">Node.js</div>
+        <div class="chip">Next.js</div>
+        <div class="chip">Tailwind</div>
+        <div class="chip">Postgres</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="card" style="margin-top:18px">
+  <h2>Contact</h2>
+  <p class="muted">I'm open to new projects and collaborations. Fill the form or reach out directly by email.</p>
+  <form action="mailto:your.email@example.com" method="post" enctype="text/plain" style="margin-top:12px">
+    <label for="name">Name</label>
+    <input id="name" name="name" placeholder="Your name" required>
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" placeholder="you@example.com" required>
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="5" placeholder="Brief message" required></textarea>
+    <button type="submit">Send message</button>
+  </form>
+</section>
+
+<footer>
+  <p>© <span id="year"></span> Your Name -- Built with care. <span class="muted">Made with HTML & CSS.</span></p>
+</footer>
+
+  </div>  <script>
+    // small niceties
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const target = document.querySelector(a.getAttribute('href'));
+        if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth',block:'start'});}
+      })
+    })
+  </script></body>
+</html>
